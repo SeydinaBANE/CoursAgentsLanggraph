@@ -1,9 +1,11 @@
 import os
+from dotenv import load_dotenv
 from typing import TypedDict, Literal
 from langgraph.graph import MessagesState, StateGraph, START, END
 from langgraph.types import Command
 from langchain_groq import ChatGroq
 from pydantic import BaseModel
+load_dotenv()
 
 
 # ============= Configuration =============
