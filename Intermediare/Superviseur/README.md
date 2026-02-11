@@ -245,7 +245,7 @@ import os
 from typing import TypedDict, Literal
 from langgraph.graph import MessagesState, StateGraph, START, END
 from langgraph.types import Command
-from langchain_openai import ChatOpenAI
+from langchain_groq import ChatGroq
 from pydantic import BaseModel
 
 
@@ -313,7 +313,7 @@ def agent_analyse(state: SupervisorState) -> Command:
 
 # ============= Construction du Graphe =============
 def build_graph():
-    llm = ChatOpenAI(model="gpt-4o", temperature=0)
+    llm = ChatGroq(model="openai/gpt-oss-120b", temperature=0)
     
     workflow = StateGraph(SupervisorState)
     
