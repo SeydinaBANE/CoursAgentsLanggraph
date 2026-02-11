@@ -97,7 +97,7 @@ def agent_recherche(state: SupervisorState) -> Command:
 ### Étape 1 : Installation des Dépendances
 
 ```bash
-pip install langgraph langchain-openai python-dotenv pydantic
+pip install langgraph langchain-openai python-dotenv pydantic langchain-groq
 ```
 
 ### Étape 2 : Définir l'État
